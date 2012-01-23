@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Day:</b>
+  <%= @storm.day %>
+</p>
+
+<p>
+  <b>Snowfall:</b>
+  <%= @storm.snowfall %>
+</p>
+
+
+<%= link_to 'Edit', edit_storm_path(@storm) %> |
+<%= link_to 'Back', storms_path %>

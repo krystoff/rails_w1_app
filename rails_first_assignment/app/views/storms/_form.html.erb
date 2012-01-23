@@ -1,0 +1,25 @@
+<%= form_for(@storm) do |f| %>
+  <% if @storm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@storm.errors.count, "error") %> prohibited this storm from being saved:</h2>
+
+      <ul>
+      <% @storm.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.text_field :day %>
+  </div>
+  <div class="field">
+    <%= f.label :snowfall %><br />
+    <%= f.text_field :snowfall %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
